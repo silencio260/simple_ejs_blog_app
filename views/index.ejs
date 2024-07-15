@@ -1,0 +1,18 @@
+<% include ./partials/header %>
+
+<% blogs.forEach(function(blog){ %>
+
+    <h1> <%= blog.title %>  </h1>
+
+
+    <img src=" <%= blog.image %> " alt=" cool blog post right here ">
+
+    <p> <%= blog.post.substring(0, 60) %>... </p>
+
+    <a href="/blogs/<%=blog._id%>"> Read more </a>
+
+<% }); %>
+
+
+
+<% include ./partials/footer %>
